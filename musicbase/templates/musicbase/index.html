@@ -1,13 +1,29 @@
-{% if list_od_top_song %}
-    <ul>
-        
-        <li>
-            {% for song in list_od_top_song %}
-            <a href="/musicbase/{{music.title}}/">{{ music.title }}</a>
-            {% endfor %}
-        </li>
-        
-    </ul>
-{% else %}
-    <p>no song avialable with this title</p>
-{% endif %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'musicbase/index.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mainbody">
+        <div class="logo-class">
+            <img src="{% static 'musicbase/logo.svg' %}" alt="logo" width="70px">
+            <h3>Hagerigna music</h3>
+        </div>
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+
+    </div>
+    <div class="mainpart">
+
+    </div>
+</body>
+</html>

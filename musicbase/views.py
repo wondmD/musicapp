@@ -5,7 +5,7 @@ from django.template import loader
 # Create your views here.
 
 def home(request):
-    return render(request, 'index.html')
+    return render(request, 'musicbase/index.html')
 
 def topsong(request):
     list_od_top_song = music.objects.order_by('-likes')[:6]

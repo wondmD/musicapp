@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(216, 216, 231);
+    display: grid;
+    grid-template-columns: 1fr 6fr ;
+    margin: 0;
+}
+.mainpart {
+    background-color: #343B66;
+    border-left: #343B66;
+}
+.logo-class {
+    display: flex;
+    background-color: #1C2439;
+    color: #fff;
+   
+    border-bottom: 10px solid #695DF7;
+}
+.mainbody {
+    height: 100vh;
+    background-color: #1C2439;
+}

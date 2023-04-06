@@ -1,0 +1,13 @@
+{% if list_od_top_song %}
+    <ul>
+        
+        <li>
+            {% for song in list_od_top_song %}
+            <a href="/musicbase/{{song.title}}/">{{ song.title }}</a>
+            {% endfor %}
+        </li>
+        
+    </ul>
+{% else %}
+    <p>no song avialable with this title</p>
+{% endif %}
