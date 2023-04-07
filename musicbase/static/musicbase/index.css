@@ -19,3 +19,7 @@ body {
     height: 100vh;
     background-color: #1C2439;
 }
+#logo {
+    
+    margin :auto 5px;
+}
