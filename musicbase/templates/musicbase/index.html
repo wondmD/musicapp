@@ -1,29 +1,119 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'musicbase/index.css' %}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'musicbase/index.css' %}" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+    <!--main body started-->
     <div class="mainbody">
-        <div class="logo-class">
-            <img id="logo" src="{% static 'musicbase/logo.svg' %}" alt="logo" width="70px">
-            <h3>Hagerigna music</h3>
-        </div>
-        <div>
-
-        </div>
-        <div>
-
-        </div>
-
+      <div class="logo-class">
+        <img
+          id="logo"
+          src="{% static 'musicbase/logo.svg' %}"
+          alt="logo"
+          width="70px"
+        />
+        <h3>Hagerigna music</h3>
+      </div>
+      <div class="music-menu">
+        <!--second menu for music and olaylist selection-->
+        <a href="#">
+          <div class="m-menu">
+            <img id="mlogo" src="{% static 'musicbase/home2.svg' %}" alt="" />
+            <h3>HOME</h3>
+          </div>
+        </a>
+        <a href="#">
+          <div class="m-menu">
+            <img id="mlogo" src="{% static 'musicbase/song.svg' %}" alt="" />
+            <h3>SONGS</h3>
+          </div>
+        </a>
+        <a href="#">
+          <div class="m-menu">
+            <img id="mlogo" src="{% static 'musicbase/artist.svg' %}" alt="" />
+            <h3>ARTIST</h3>
+          </div>
+        </a>
+        <a href="#">
+          <div class="m-menu">
+            <img
+              id="mlogo"
+              src="{% static 'musicbase/playlsit.png' %}"
+              alt=""
+            />
+            <h3>PLAYLIST</h3>
+          </div>
+        </a>
+      </div>
+      <!--third lift side menu for adding music -->
+      <div class="add-menu">
+        <a href="#">
+          <div class="m-menu">
+            <img id="mlogo" src="{% static 'musicbase/home2.svg' %}" alt="" />
+            <h3>ADD SONG</h3>
+          </div>
+        </a>
+        <a href="#">
+          <div class="m-menu">
+            <img id="mlogo" src="{% static 'musicbase/song.svg' %}" alt="" />
+            <h3>CREATE PLAYLIST</h3>
+          </div>
+        </a>
+        <a href="#">
+          <div class="m-menu">
+            <img id="mlogo" src="{% static 'musicbase/artist.svg' %}" alt="" />
+            <h3>ABOUT</h3>
+          </div>
+        </a>
+      </div>
+      
     </div>
     <div class="mainpart">
+        <div class="headerpart">
+            <div>
+                <h1 id="title">HAGERIGN MUSIC COLLECTION</h1>
+                <hr>
+            </div>
+            <div class="profile">
+                <img id="userpic" src="{% static 'musicbase/song.svg' %}" alt="user-x" width="90px">
+                <small>user-x</small>
+            </div>
+        </div>
+        
+        <div class="lowerbody">
+            <div class="musics">
+                <div class="topsong">
+                    <div class="toptitle"><h1 id="title2">TOP SONGS</h1></div>
+                    <div class="songlist">
+                        {% if list_od_top_song %}
+    
+                            {% for song in list_od_top_song %}
+                                {{song.art}}
+                                <a href="/musicbase/{{song.title}}/">{{ song.title }}</a>
+                            {% endfor %}
+                            {% else %}
+                                <p>no song avialable with this title</p>
+                        {% endif %}
+        
 
+                    </div>
+                </div>
+                <div class="usersong">
+                    <div class="usertitile"><h1 id="title2">TONGS UPLOADED BY YOU</h1></div>
+                    <div class="songlist"></div>
+                </div>
+            </div>
+            <div class="leftbar">
+
+            </div>
+        </div>
+          
     </div>
-</body>
+  </body>
 </html>

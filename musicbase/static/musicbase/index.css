@@ -7,12 +7,15 @@ body {
 .mainpart {
     background-color: #343B66;
     border-left: #343B66;
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+    height: 100vh;
 }
 .logo-class {
     display: flex;
     background-color: #1C2439;
     color: #fff;
-   
+    padding: 5%;
     border-bottom: 10px solid #695DF7;
 }
 .mainbody {
@@ -22,4 +25,65 @@ body {
 #logo {
     
     margin :auto 5px;
+}
+#mlogo {
+    width: 60px;
+}
+.m-menu{
+    display: flex;
+    align-items: center;
+    padding: 5%;
+    margin: 10px;
+    color: #A6A0E7;
+}
+#mlogo{
+    margin: 5%;
+}
+.music-menu{
+    border-bottom: 10px solid #695DF7;
+}
+.headerpart {
+    display: grid;
+    grid-template-columns: 8fr 1fr ;
+    height: 10vh;
+    margin-bottom: 0px;
+}
+#userpic {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    padding: 10%;
+}
+.profile {
+    display: grid;
+    grid-template-rows: 8fr 8fr;
+    color: #fff;
+    padding-bottom: 0%;
+    margin-bottom: 0px;
+
+}
+small{
+    margin-left: 18%;
+}
+#title {
+    text-align: center;
+    color: #A6A0E7;
+    padding: 1%;
+    padding-bottom: 0%;
+    font-size: 40px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#title2{
+    color: #A6A0E7;
+    padding: 1%;
+    padding-bottom: 0%;
+    font-size: 40px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 200;
+}
+.songlist{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
 }
